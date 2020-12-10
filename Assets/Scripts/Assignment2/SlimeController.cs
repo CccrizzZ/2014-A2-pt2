@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/************************************************
+Source File Name: SlimeController.cs            
+Student Name: Beining Liu                   
+Student ID: 101193350                       
+Date Last Modified: Dec 11                  
+Program Description: Slime enemy controller script.
+************************************************/
+
 public class SlimeController : MonoBehaviour
 {
     
@@ -37,7 +46,7 @@ public class SlimeController : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D other) {
         // flag = !flag;
-        Debug.Log(other.gameObject.name);
+        // Debug.Log(other.gameObject.name);
 
         if (Time.frameCount % 240 == 0)
         {

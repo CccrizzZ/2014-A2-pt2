@@ -2,6 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/************************************************
+Source File Name: DontDestroy.cs            
+Student Name: Beining Liu                   
+Student ID: 101193350                       
+Date Last Modified: Dec 11                  
+Program Description: dont destroy script
+************************************************/
+
+
 public class DontDestroy : MonoBehaviour
 {
     void Awake()

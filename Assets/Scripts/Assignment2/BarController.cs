@@ -3,6 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/************************************************
+Source File Name: BarController.cs            
+Student Name: Beining Liu                   
+Student ID: 101193350                       
+Date Last Modified: Dec 11                  
+Program Description: Player health bar controller script.
+************************************************/
+
+
+
 [System.Serializable]
 public class BarController : MonoBehaviour
 {
@@ -31,6 +41,9 @@ public class BarController : MonoBehaviour
     {
         currentValue = new_value;
         bar.localScale = new Vector3((float)((double)currentValue / (double)maxValue), 1.0f, 1.0f);
+
+        bar.transform.position = new Vector3(bar.transform.position.x, bar.transform.position.y,bar.transform.position.z);
+
 
         // clamp the scale on the x axis to be zero minimum
         if (bar.localScale.x < 0)

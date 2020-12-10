@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/************************************************
+Source File Name: EnemyFactory.cs            
+Student Name: Beining Liu                   
+Student ID: 101193350                       
+Date Last Modified: Dec 11                  
+Program Description: Regenerates enemy in the game level
+************************************************/
+
+
 public class EnemyFactory : MonoBehaviour
 {
 
@@ -27,7 +36,7 @@ public class EnemyFactory : MonoBehaviour
 
         if (Slimecount <= 5 && Time.frameCount % 240 == 0)
         {
-            Debug.Log(Slimecount);
+            // Debug.Log(Slimecount);
             Slime.transform.position = new Vector3(Random.Range(-17,22), 8.5f,0);
             Instantiate(Slime);
         }

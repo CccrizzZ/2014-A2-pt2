@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/************************************************
+Source File Name: BatController.cs            
+Student Name: Beining Liu                   
+Student ID: 101193350                       
+Date Last Modified: Dec 10                  
+Program Description: bat enemy controller script.
+************************************************/
+
+
 public class BatController : MonoBehaviour
 {
 

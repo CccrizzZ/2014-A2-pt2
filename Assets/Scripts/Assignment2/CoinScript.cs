@@ -3,6 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/************************************************
+Source File Name: CoinScript.cs            
+Student Name: Beining Liu                   
+Student ID: 101193350                       
+Date Last Modified: Dec 11                  
+Program Description: re-generate coins in the level
+************************************************/
+
+
 public class CoinScript : MonoBehaviour
 {
 

@@ -4,6 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/************************************************
+Source File Name: PlayerBehavior.cs            
+Student Name: Beining Liu                   
+Student ID: 101193350                       
+Date Last Modified: Dec 11                  
+Program Description: Player behaviour script.
+************************************************/
+
+
 
 public class PlayerBehavior : MonoBehaviour
 {
@@ -70,6 +79,7 @@ public class PlayerBehavior : MonoBehaviour
         LifeCount = 3;
         ScoreCount = 0;
         m_Health = 100;
+        fireball = false;
     }
 
     void Update()
@@ -119,18 +129,21 @@ public class PlayerBehavior : MonoBehaviour
                 animator.SetInteger("CatState", 0);
             }
 
-
             if (joystick.Vertical > joystickVerticalSensitivity)
             {
                 rb.AddForce(Vector3.up * verticalForce * Time.deltaTime);
-                animator.SetInteger("CatState", 2);
+                animator.SetInteger("CatState", 1);
                 isJumping = true;
             }
             else
             {
                 isJumping = false;
             }
+
+            
         }
+  
+
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -177,6 +190,11 @@ public class PlayerBehavior : MonoBehaviour
 
     public void Fire()
     {
-        // Instantiate
+        if (fireball)
+        {
+            
+            // Instantiate
+            Debug.Log("Fire");
+        }
     }
 }

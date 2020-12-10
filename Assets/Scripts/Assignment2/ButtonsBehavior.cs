@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/************************************************
+Source File Name: ButtonsBehavior.cs            
+Student Name: Beining Liu                   
+Student ID: 101193350                       
+Date Last Modified: Dec 11                  
+Program Description: Button behavior script.
+************************************************/
+
 
 public class ButtonsBehavior : MonoBehaviour
 {
@@ -11,11 +19,26 @@ public class ButtonsBehavior : MonoBehaviour
     GameObject bgm;
     MusicPlayer mp;
     AudioSource[] asc;
+    
+    public GameObject pref;
+    PlayerBehavior pb;
 
     void Start()
     {
-        bgm = GameObject.Find("BGM");
-        mp = bgm.GetComponent<MusicPlayer>();
+        if (bgm != null)
+        {
+            bgm = GameObject.Find("BGM");
+            mp = bgm.GetComponent<MusicPlayer>();
+            
+        }
+
+        if (pref != null)
+        {
+            pb = pref.GetComponent<PlayerBehavior>();
+
+        }
+
+    
     }
     
     public void NewGameButtonOnPress()
@@ -47,7 +70,7 @@ public class ButtonsBehavior : MonoBehaviour
 
     public void FireButtonOnPress()
     {
-        
+        pb.Fire();
     }
     
 

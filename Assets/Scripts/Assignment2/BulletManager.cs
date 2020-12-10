@@ -2,19 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/************************************************
+Source File Name: BulletManager.cs            
+Student Name: Beining Liu                   
+Student ID: 101193350                       
+Date Last Modified: Dec 11                  
+Program Description: Bullet manager for bullet pool
+************************************************/
+
+
+
 [System.Serializable]
 public class BulletManager
 {
-    // step 1. create a private static instance
     private static BulletManager m_instance = null;
 
-    // step 2. make our default constructor private
+
     private BulletManager()
     {
 
     }
 
-    // step 3. make a public static creational method for class access
     public static BulletManager Instance()
     {
         if (m_instance == null)
@@ -28,33 +36,33 @@ public class BulletManager
 
     private Queue<GameObject> m_bulletPool;
 
-    // public void Init(int max_bullets = 50, BulletType type = BulletType.REGULAR)
-    // {   // step 4 initialize class variables and start the bullet pool build
-    //     MaxBullets = max_bullets;
-    //     _BuildBulletPool(type);
-    // }
+    public void Init(int max_bullets = 20)
+    {   // step 4 initialize class variables and start the bullet pool build
+        MaxBullets = max_bullets;
+        BuildBulletPool();
+    }
 
-    // private void _BuildBulletPool(BulletType type)
-    // {
-    //     // create empty Queue structure
-    //     m_bulletPool = new Queue<GameObject>();
+    private void BuildBulletPool()
+    {
+        // create empty Queue structure
+        m_bulletPool = new Queue<GameObject>();
 
-    //     for (int count = 0; count < MaxBullets; count++)
-    //     {
-    //         var tempBullet = BulletFactory.Instance().createBullet(type);
-    //         m_bulletPool.Enqueue(tempBullet);
-    //     }
-    // }
+        for (int count = 0; count < MaxBullets; count++)
+        {
+            // var tempBullet = BulletFactory.Instance().createBullet();
+            // m_bulletPool.Enqueue(tempBullet);
+        }
+    }
     
 
     
-    // public GameObject GetBullet(Vector3 position)
-    // {
-    //     var newBullet = m_bulletPool.Dequeue();
-    //     newBullet.SetActive(true);
-    //     newBullet.transform.position = position;
-    //     return newBullet;
-    // }
+    public GameObject GetBullet(Vector3 position)
+    {
+        var newBullet = m_bulletPool.Dequeue();
+        newBullet.SetActive(true);
+        newBullet.transform.position = position;
+        return newBullet;
+    }
 
     public bool HasBullets()
     {

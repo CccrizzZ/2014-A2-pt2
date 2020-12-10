@@ -2,6 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/************************************************
+Source File Name: VPlatformController.cs            
+Student Name: Beining Liu                   
+Student ID: 101193350                       
+Date Last Modified: Dec 11                  
+Program Description: controls moving platforms in game level
+************************************************/
+
+
 public class VPlatformController : MonoBehaviour
 {
     public float VtravelDistance;
