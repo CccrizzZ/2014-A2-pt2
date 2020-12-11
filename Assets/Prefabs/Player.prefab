@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 666584727878935673}
   - component: {fileID: 666584727878935672}
   - component: {fileID: 2723331483624112208}
+  - component: {fileID: -201266768076443642}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -229,6 +230,8 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   LifeCount: 0
   LifeText: {fileID: 0}
+  ScoreCount: 0
+  ScoreText: {fileID: 0}
   m_Health: 0
   m_HealthBar: {fileID: 0}
   audioSource: []
@@ -347,3 +350,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-201266768076443642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666584727878935617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adc84d7e505a92b4f96a680f2e15b95f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bulletref: {fileID: 3531873859588461093, guid: 16d362f28fcb70843a3a9544a31a0c9e, type: 3}
+  FirePoint: {fileID: 0}

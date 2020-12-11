@@ -39,11 +39,12 @@ public class BarController : MonoBehaviour
 
     public void SetValue(int new_value)
     {
+        
+
         currentValue = new_value;
         bar.localScale = new Vector3((float)((double)currentValue / (double)maxValue), 1.0f, 1.0f);
 
-        bar.transform.position = new Vector3(bar.transform.position.x, bar.transform.position.y,bar.transform.position.z);
-
+        
 
         // clamp the scale on the x axis to be zero minimum
         if (bar.localScale.x < 0)

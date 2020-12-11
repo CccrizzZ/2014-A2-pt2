@@ -21,20 +21,21 @@ public class ButtonsBehavior : MonoBehaviour
     AudioSource[] asc;
     
     public GameObject pref;
-    PlayerBehavior pb;
+    ShootingController pb;
 
     void Start()
     {
-        if (bgm != null)
+        if (GameObject.Find("BGM") != null)
         {
             bgm = GameObject.Find("BGM");
             mp = bgm.GetComponent<MusicPlayer>();
             
         }
+        
 
         if (pref != null)
         {
-            pb = pref.GetComponent<PlayerBehavior>();
+            pb = pref.GetComponent<ShootingController>();
 
         }
 
@@ -71,6 +72,7 @@ public class ButtonsBehavior : MonoBehaviour
     public void FireButtonOnPress()
     {
         pb.Fire();
+
     }
     
 

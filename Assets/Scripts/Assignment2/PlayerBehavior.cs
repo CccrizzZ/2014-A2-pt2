@@ -188,13 +188,4 @@ public class PlayerBehavior : MonoBehaviour
 
     }
 
-    public void Fire()
-    {
-        if (fireball)
-        {
-            
-            // Instantiate
-            Debug.Log("Fire");
-        }
-    }
 }
