@@ -34,7 +34,7 @@ public class EnemyFactory : MonoBehaviour
             Instantiate(Bat);
         }
 
-        if (Slimecount <= 5 && Time.frameCount % 240 == 0)
+        if (Slimecount <= 30 && Time.frameCount % 240 == 0)
         {
             // Debug.Log(Slimecount);
             Slime.transform.position = new Vector3(Random.Range(-17,22), 8.5f,0);

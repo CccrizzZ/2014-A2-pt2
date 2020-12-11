@@ -24,6 +24,7 @@ public class BulletController : MonoBehaviour
     
     void Start()
     {
+        GameObject.Find("BGM").GetComponent<MusicPlayer>().MusicPlayerArray[1].Play();
         startPos = transform.position;
         verticalBound = 6.0f;
         horizontalBound = 6.0f;
@@ -50,14 +51,15 @@ public class BulletController : MonoBehaviour
 
     }
     
-    private void OnTriggerEnter2D(Collider2D other) 
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Slime"))
         {
             Destroy(other.gameObject);
-            
+            Destroy(gameObject);
+            GameObject.Find("Player").GetComponent<PlayerBehavior>().audioSource[2].Play();
+            GameObject.Find("Player").GetComponent<PlayerBehavior>().ScoreCount += 1;
         }
-        Destroy(gameObject);
-        GameObject.Find("BGM").GetComponent<MusicPlayer>().MusicPlayerArray[1].Play();
+        
     }
 }
